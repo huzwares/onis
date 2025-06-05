@@ -219,6 +219,11 @@
             document.addEventListener("DOMContentLoaded", () => {
                 const pizzaOptions = [
                     {
+                        id: "pepperoni_1",
+                        name: "Pepperoni",
+                        imageSrc: "img/piz2.png",
+                    },
+                    {
                         id: "margherita_1",
                         name: "Margherita",
                         imageSrc: "img/piz1.png",
@@ -226,22 +231,17 @@
                     {
                         id: "veggie_1",
                         name: "Italian Veggie",
-                        imageSrc: "img/piz2.png",
-                    },
-                    {
-                        id: "pepperoni_1",
-                        name: "Pepperoni",
-                        imageSrc: "img/piz1.png",
+                        imageSrc: "img/piz3.png",
                     },
                     {
                         id: "farmhouse_1",
                         name: "Farmhouse",
-                        imageSrc: "img/piz2.png",
+                        imageSrc: "img/piz1.png",
                     },
                     {
                         id: "pepperoni_2",
                         name: "Pepperoni",
-                        imageSrc: "img/piz1.png",
+                        imageSrc: "img/piz2.png",
                     },
                 ];
 
@@ -249,11 +249,14 @@
                 const pizzaImageElement = document.getElementById("displayed-pizza-image");
 
                 const menuItemPositions = [
-                    { top: "145px", left: "calc(50% - 320px)" },
+                    // { top: "145px", left: "calc(50% - 320px)" },
+                    // { top: "145px", left: "13%" },
+                    { top: "145px", left: "calc(50% - 353px)" },
                     { top: "75px", left: "calc(50% - 200px)" },
                     { top: "35px", left: "calc(50% - 0px)" },
                     { top: "75px", left: "calc(50% + 200px)" },
-                    { top: "145px", left: "calc(50% + 320px)" },
+                    // { top: "145px", left: "calc(50% + 320px)" },
+                    { top: "145px", left: "calc(50% + 353px)" },
                 ];
                 const itemPositionsMobile = [
                     { top: "75px", left: "calc(50% - 175px)" },

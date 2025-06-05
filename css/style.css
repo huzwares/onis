@@ -319,13 +319,14 @@ section.pizza-showcase-container {
 #Ellipse {
     position: absolute;
     top: 100px;
+    aspect-ratio: 2.4577901261;
 }
 
 .arc-selection-menu {
     position: relative;
     width: 100%;
     height: 180px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     z-index: 10;
 }
 
@@ -333,7 +334,7 @@ section.pizza-showcase-container {
     position: absolute;
     transform: translateX(-50%);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     font-weight: 1000;
@@ -377,6 +378,14 @@ section.pizza-showcase-container {
 
 .arc-menu-item.active::after {
     background-color: var(--color-red);
+}
+
+.arc-menu-item:first-child {
+    align-items: end;
+}
+
+.arc-menu-item:last-child {
+    align-items: start;
 }
 
 .pizza-image-display {
@@ -432,6 +441,11 @@ section.pizza-showcase-container {
 
     #Ellipse {
         top: 65px;
+    }
+
+    .arc-menu-item:first-child,
+    .arc-menu-item:last-child {
+        align-items: center;
     }
 }
 @media (max-width: 480px) {
@@ -567,7 +581,7 @@ img#lets_go {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 9rem var(--padd) 2rem;
+    padding: 10rem var(--padd) 2rem;
 }
 
 section.best_item {
@@ -585,7 +599,7 @@ section.best_item {
 }
 
 .row a {
-    padding: var(--padd);
+    padding: calc(var(--padd) + 0.5rem);
     display: flex;
     gap: var(--gap);
     flex-direction: column;
@@ -643,7 +657,7 @@ section.best_item {
     background-image: url("../img/f_row.png");
     background-size: cover;
     background-position: center;
-    padding: 5rem var(--padd);
+    padding: 9rem var(--padd);
     /* z-index: 9; */
     margin-top: -1px;
 }
@@ -748,7 +762,7 @@ footer {
     }
 
     section.cards {
-        margin: calc(4 * var(--gap)) auto calc(3 * var(--gap));
+        margin: calc(3 * var(--gap)) auto;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "small big" "wide wide";
     }
@@ -763,6 +777,14 @@ footer {
 
     .cards a hgroup p {
         font-size: 14px;
+    }
+
+    .cards img {
+        transition: all 0.3s ease;
+    }
+
+    .cards a:hover img {
+        transform: scale(1.1);
     }
 
     .menu {
@@ -812,7 +834,7 @@ footer {
     #promotion_card img:not(#lets_go) {
         width: 550px;
         left: unset;
-        right: -18px;
+        right: 0;
         bottom: 0;
     }
 
@@ -900,7 +922,7 @@ footer {
     }
 
     .top_header img {
-        width: 82px;
+        width: 50px;
     }
 
     .top_header strong {
